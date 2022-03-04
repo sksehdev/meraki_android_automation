@@ -10,17 +10,18 @@ locators = {"apiKeyLabel" : 'com.meraki.mapidemo:id/apiKeyLabel'
 }
 
 constants = {"apiKeyLabel" : 'Enter API Key',
-              "APIKEY" : "5da1735a6a6b1360986bb2c8c10ae2817e476244",
+              "APIKEY" : "",  ## Please Enter API key
              "device_ips" : ['172.29.4.159', '172.29.4.135', '172.29.6.59', '172.29.6.38']
 }
 
 @pytest.fixture
 def driver():
+    ## Please enter the arguments according to your local setup
     desired_caps = {
         "platformName": "Android",
         "deviceName": "Android Emulator",
         "automationName": "uiautomator2",
-        "app": "C:/Users/ssehdev/Downloads/app-debug.apk",
+        "app": "C:/Users/ssehdev/Downloads/app-debug.apk",  #
         "appWaitForLaunch": False,
         "adbExecTimeout": 120000
     }
